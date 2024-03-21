@@ -1,13 +1,21 @@
+import org.junit.Test;
 public class Main {
     public static void main(String[] args) {
-        Lista<String> l = new Lista<>();
-        l.insert("h");
-        l.insert("o");
-        l.insert("l");
-        l.insert("a");
-        l.insertLast("!");
-        l.print(TraverseDirection.BACKWARD);
+        Lista<Integer> lista = new Lista<>();
+        lista.insertLast(1);
+        lista.insertLast(2);
+        lista.insertLast(3);
+        lista.insertLast(4);
+        lista.insertLast(5);
+        Lista<Integer> sublista = lista.subLista(1, 3);
+        lista.print(TraverseDirection.FORWARD);
         System.out.println();
-        l.print(TraverseDirection.FORWARD);
+        lista.invertirLista();
+        lista.print(TraverseDirection.FORWARD);
+        System.out.println();
+        sublista.print(TraverseDirection.FORWARD);
+        lista.toString();
+        System.out.println();
+        lista.print(TraverseDirection.FORWARD);
     }
 }
