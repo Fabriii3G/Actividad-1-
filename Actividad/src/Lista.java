@@ -1,6 +1,7 @@
 public class Lista<T> {
     private Nodo<T> head = null;
     private Nodo<T> tail = null;
+    private int size;
 
     public boolean isEmpty() {
 
@@ -50,9 +51,15 @@ public class Lista<T> {
 
     }
 
-    public void InsertarLista(){
-
+    public void insertarLista(Lista<T> lista) {
+        Nodo<T> actual = head;
+        while (actual.next != null) {
+            actual = actual.next;
+        }
+        actual.next = lista.head;
+        size += lista.size;
     }
+
 
     public Lista<T> subLista(int Pos, int tamano) {
         Lista<T> subList = new Lista<>();
