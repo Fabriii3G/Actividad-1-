@@ -2,7 +2,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ListaTest {
-
     // Prueba del metodo insertar lista
     @Test
     public void testInsertarLista1(){
